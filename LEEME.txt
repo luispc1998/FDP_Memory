@@ -1,0 +1,30 @@
+En esta carpeta se encuentra una adaptación a LaTex de la plantilla de PFC de la EII Se ha creado de forma que
+sea exactamente equivalente a la ultima versión de la que se ofrece en formatos Word y OpenOffice, con las mismas
+funciones y secciones. No se pretende hacer una guía exhaustiva de Latex, sino solo un documento de ayuda para 
+formar y estructurar el guión de vuestros PFC con este formato de documentos. 
+
+Para usar correctamente esta plantilla hay que tener en cuenta las siguientes consideraciones:
+
+- Para su creación se ha usado MikTex 2.8 para Windows (http://miktex.org/) y el editor TexNicCenter 1.0 RC1 (
+http://www.texniccenter.org/). La plantilla debería funcionar correctamente con otras distribuciones y programas.
+En entornos linux se ha probado con Kile funcionando correctamente siempre que el archivo se abra con el encoding
+adecuado (ver más abajo).
+- Se usan un buen nº de funcionalidades de Latex. Para que la plantilla pueda procesarse correctamente hay que
+asegurarse de que todos los paquetes referenciados en el preámbulo del documento han sido instalados (o usar una 
+instalación completa de la última versión de MikTex).
+- El fichero proporcionado tiene un encoding iso-8859-1. Si el editor usado no lo abre usando el mismo o compatible,
+los acentos y otros caracteres no estandar se perderán.
+- No poner la plantilla en un path demasiado largo o el DVI dará constantes warnings al visualizarlo.
+- Si al generar el DVI aparece un error referente al hyphenation del texto, debemos hacer lo siguiente para 
+solucionarlo:
+
+1) Inicio -> Todos los Programas -> MikTeX ->  Settings (Admin) -> Languages -> Seleccionar Spanish
+2) Inicio -> Todos los Programas -> MikTeX ->  Settings (Admin) -> General -> Update Formats
+3) Instalar paquete hyphenat
+4) Si se da un error similar con el idioma griego se debe al caracter usado como símbolo de euro solamente por lo que
+practicamente no afecta al resultado del documento. La solución debería ser la misma que la de los 2 primeros pasos 
+anteriores, solo que para griego en lugar de español.
+
+- Para generar un PDF no conviene usar las herramientas de TexNicCenter si usamos imagenes .ps ya que el documento
+no incluirá sus imagenes (esto no debería ocurrir con otros formatos de imagenes. Una alternativa válida (con la 
+que se ha generado el PDF adjunto en esta distribución) es: dvipdfm <nombre del dvi>.dvi
