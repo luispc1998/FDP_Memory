@@ -268,27 +268,36 @@ This project will be focused on providing a better approach to solve the problem
  
 A lot of literature has been published regarding scheduling problems. The main issue is that the formalization and solution of this type of problems strongly depend on the domain constraints to be considered.
 
-Despite that fact, it seems to be some agreement on using genetic algorithms to obtain good enough solutions. This can be seen in [paper]. Furthermore, its use has been proven effective in a previous Final Degree Project, which was also focused on the school as domain.
+Despite that fact, it seems to be some agreement on using genetic algorithms to obtain good enough solutions, as can be be seen in [paper]. Furthermore, its use has been proven effective in a previous Final Degree Project, which was also focused on the school as domain.
+
+Nevertheless it is interesting to consider other approaches as well as the reasons for which they were not chosen.  
  
 \subsubsection{Constraint Programming}
 
+Constraint programming is a programming paradigm in itself. It is focused on solving combination search problem such as is the machine assignment one.
+
+Our problem differs a bit from the classical combination problem, in the end it is a scheduling problem which consists in no more than making assignments according to some criteria, such as is done in the classical problems.
+
+Because of that it would be feasible to achieve a solution by means of Constraint Programming but such a procedure would have some undesired drawbacks. First of all, it would require a complex mathematical and logical formulation which would imply in a complex documentation and code that would complicate the maintenance of the provided tool. Furthermore a minor change in some of the constrictions or the inclusion of a new type of constriction would imply a complete reevaluation and reformulation of the whole problem.
+
+Since it is expected for such a new constraints to appear, this approach even if it would lead to valid results would be troublesome in the long term. 
+
+
+[TODO - Would be necessary a further explanation of the technology?]
 \begin{itemize}
 	\item programming paradigm 
 	\item backtracking
 	\item logic programming
 	\item History -> CHIP, ...
 \end{itemize}
-\subsubsection{Sistema 2}
-
-...
-
 
 
 
 \chapter{Aspectos Teóricos}
-
+{
+\color{red}
 Esta sección está destinada a describir brevemente aquellos conceptos, herramientas y tecnologías existentes que vamos a usar en nuestro proyecto. Conviene limitarse a un máximo de 2 hojas por cada uno de ellos aproximadamente (es una descripción, no un tutorial sobre ello), describiendo por qué y para qué usamos esto en nuestro proyecto pero sin hacer descripciones muy grandes de características y similares (para ello podemos referenciar enlaces Web, libros, etc. que las describan más detalladamente, que posteriormente podemos incluir en la bibliografía):
-
+}
 \begin{enumerate}
 \item  En el caso de conceptos sobre los que trata el proyecto, debemos decir su origen, aplicación e importancia, para tener una idea de lo que se va a tratar. A modo de ejemplo, si usamos bases de datos orientadas a objetos debemos decir que son, que importancia tienen y describir brevemente su forma de trabajo. Si nuestro proyecto es sobre emisión de video en directo, debemos describir la técnica usada para ello y como funciona, etc.
 \item  En el caso de tecnologías debemos decir su creador u origen, para lo que sirve y que aplicaciones ha tenido, para qué la vamos a usar, la versión que hemos empleado, etc.
@@ -299,9 +308,12 @@ Esta sección está destinada a describir brevemente aquellos conceptos, herramien
  Por último, debemos recordar describir de esta forma todo aquello que usemos en el proyecto y dar especial importancia a todo aquello que sea ``novedoso''.
 
 
-\section{Concepto 1}
+\section{Scheduling Problems}
+Scheduling problems consist in the effectual management and distribution of resources, according to some given constraints by the domain of the problem, in our case this would be the University of Oviedo School of Computer Science.
 
- Definición
+It has been proven that many of the scheduling problems are in fact NP-hard, which imply that they cannot be solved in polynomial type using a deterministic algorithm. Because of that, nowadays researchers consider other approaches such as are genetic algorithms and constraint programming.
+
+
 
 \newpage
 \section{Concepto 2}
